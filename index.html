@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Denir | Ovos caipiras fresquinhos</title>
+<meta name="description" content="Conheça os ovos caipiras Denir: naturais, de galinhas criadas soltas e com sabor de roça. Faça seu pedido pelo WhatsApp.">
+<meta name="theme-color" content="#315b3c">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Denir | Ovos caipiras fresquinhos">
+<meta property="og:description" content="Sabor de roça, fresquinho para sua mesa. Peça seus ovos caipiras com Denir.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --verde:#315b3c; --verde-fundo:#1f3d28; --gema:#f2b632; --gema-escura:#d99a14;
+  --folha:#e6eddc; --papel:#f7f8f3; --texto:#1d2a21; --suave:#51604f;
+  --serif:'Fraunces',Georgia,'Times New Roman',serif;
+  --sans:'Figtree',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;
+}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);font-size:1.0625rem;line-height:1.6;color:var(--texto);background:var(--papel)}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--gema);outline-offset:3px}
+.wrap{max-width:1040px;margin:0 auto;padding:0 1.25rem}
+
+/* Botões */
+.btn{display:inline-block;font:600 1rem/1 var(--sans);text-decoration:none;padding:.95rem 1.4rem;border-radius:999px;border:2px solid transparent;cursor:pointer;transition:background .2s,transform .2s}
+.btn-gema{background:var(--gema);color:var(--verde-fundo)}
+.btn-gema:hover{background:var(--gema-escura)}
+.btn-borda{border-color:rgba(255,255,255,.55);color:#fff}
+.btn-borda:hover{background:rgba(255,255,255,.12)}
+.btn-verde{background:var(--verde);color:#fff}
+.btn-verde:hover{background:var(--verde-fundo)}
+.btn:active{transform:translateY(1px)}
+
+/* Topo e hero */
+.hero{background:var(--verde);color:#f3f6ee;padding-top:1.25rem;overflow:hidden}
+.topo{display:flex;align-items:center;justify-content:space-between;gap:1rem}
+.marca{display:flex;align-items:center;gap:.6rem;text-decoration:none;font:700 1.6rem/1 var(--serif)}
+.marca small{display:block;font:500 .78rem/1.2 var(--sans);opacity:.8;letter-spacing:.02em}
+.marca-ovo{width:26px;height:34px;border-radius:50% 50% 50% 50%/62% 62% 38% 38%;background:radial-gradient(circle at 38% 40%,var(--gema) 0 30%,#fff7e0 32%)}
+.topo nav{display:none;gap:1.6rem;font-weight:500}
+.topo nav a{text-decoration:none;opacity:.9}
+.topo nav a:hover{opacity:1;text-decoration:underline;text-underline-offset:5px}
+.topo .btn{padding:.7rem 1.1rem;font-size:.95rem}
+@media(min-width:760px){.topo nav{display:flex}}
+
+.hero-texto{padding:4.5rem 0 3rem}
+.hero h1{font:700 clamp(2.5rem,8vw,5.4rem)/1.02 var(--serif);letter-spacing:-.02em;max-width:13ch}
+.hero h1 span{display:block}
+.hero h1 span+span{color:var(--gema)}
+.hero p.lead{margin:1.5rem 0 2rem;max-width:34ch;font-size:1.25rem;opacity:.92}
+.acoes{display:flex;flex-wrap:wrap;gap:.8rem}
+.selo{margin-top:1.4rem;font-size:.95rem;opacity:.8}
+
+/* Ovos de cascas variadas */
+.ovos{display:flex;align-items:flex-end;justify-content:space-between;gap:.5rem;padding:0 0 1.5rem;border-bottom:0}
+.ovo{--c:#e9dcc3;--r:0deg;--i:0;
+  width:clamp(36px,9.4vw,88px);aspect-ratio:3/4;flex:none;
+  border-radius:50% 50% 50% 50%/62% 62% 38% 38%;
+  background:radial-gradient(circle at 34% 26%,rgba(255,255,255,.6),transparent 36%),var(--c);
+  box-shadow:inset -7px -9px 14px rgba(0,0,0,.16),0 12px 14px -8px rgba(0,0,0,.45);
+  transform:rotate(var(--r));
+  animation:pousar .8s cubic-bezier(.3,1.35,.5,1) both;animation-delay:calc(var(--i)*80ms)}
+.ovo.pintado{background:
+  radial-gradient(circle at 34% 26%,rgba(255,255,255,.5),transparent 34%),
+  radial-gradient(circle at 62% 60%,rgba(80,50,25,.45) 0 1.5px,transparent 2px) 0 0/13px 15px,
+  radial-gradient(circle at 30% 70%,rgba(80,50,25,.35) 0 1.5px,transparent 2px) 0 0/17px 11px,var(--c)}
+@keyframes pousar{from{transform:translateY(-140px) rotate(calc(var(--r)*4));opacity:0}to{transform:rotate(var(--r));opacity:1}}
+.palha{height:18px;background:var(--verde-fundo)}
+
+/* Seções */
+section{padding:5rem 0}
+h2{font:700 clamp(1.9rem,4.6vw,3rem)/1.1 var(--serif);letter-spacing:-.015em;max-width:18ch}
+.tx{color:var(--suave);max-width:52ch}
+.tx p+p{margin-top:1rem}
+
+.essencia .grade{display:grid;gap:2.5rem}
+.essencia .tx{margin-top:1.2rem}
+.pontos{list-style:none;padding:0;display:grid;gap:1.6rem;align-content:start}
+.pontos li{border-left:5px solid var(--gema);padding-left:1.1rem}
+.pontos strong{display:block;font:700 1.35rem/1.2 var(--serif);color:var(--verde)}
+.pontos span{color:var(--suave)}
+@media(min-width:820px){.essencia .grade{grid-template-columns:1.1fr .9fr;gap:4rem}}
+
+.nossos{background:var(--folha)}
+.nossos .grade{display:grid;gap:2rem}
+.checks{list-style:none;padding:0;margin:1.5rem 0 2rem;display:grid;gap:.6rem}
+.checks li{display:flex;gap:.7rem;align-items:baseline;font-weight:500}
+.checks li::before{content:"";flex:none;width:.8rem;height:.8rem;border-radius:50%;background:var(--verde);transform:translateY(1px)}
+.cores{display:flex;flex-wrap:wrap;gap:.8rem;align-items:end;align-content:center}
+.cores .ovo{width:clamp(52px,12vw,96px);animation:none}
+.nossos figure figcaption{margin-top:1rem;font-weight:600;color:var(--verde)}
+@media(min-width:820px){.nossos .grade{grid-template-columns:1.1fr .9fr;align-items:center;gap:4rem}}
+
+.convite{background:var(--verde);color:#f3f6ee;text-align:left}
+.convite h2{max-width:20ch}
+.convite p{margin:1rem 0 1.8rem;font-size:1.15rem;opacity:.9}
+
+.contato .grade{display:grid;gap:2.5rem}
+.fone{display:inline-block;margin-top:1.4rem;font:700 1.5rem/1.2 var(--serif);color:var(--verde);text-decoration-thickness:2px;text-underline-offset:6px}
+.nota{margin-top:1rem;font-size:.95rem;color:var(--suave);max-width:44ch}
+form{background:#fff;border:2px solid var(--folha);border-radius:18px;padding:1.6rem;display:grid;gap:1.1rem}
+form h3{font:700 1.4rem/1.2 var(--serif);color:var(--verde)}
+label{display:grid;gap:.35rem;font-weight:600;font-size:.95rem}
+input,textarea{font:inherit;font-weight:400;padding:.8rem .9rem;border:2px solid #cfd8c8;border-radius:10px;background:var(--papel);color:var(--texto);width:100%}
+input:focus,textarea:focus{outline:none;border-color:var(--verde);box-shadow:0 0 0 3px rgba(49,91,60,.2)}
+textarea{min-height:5.5rem;resize:vertical}
+form .btn{justify-self:start}
+@media(min-width:820px){.contato .grade{grid-template-columns:1fr 1fr;gap:4rem;align-items:start}}
+
+footer{background:var(--verde-fundo);color:#dfe8d6;padding:2.5rem 0;font-size:.95rem}
+footer .wrap{display:flex;flex-wrap:wrap;gap:1.2rem 3rem;justify-content:space-between;align-items:center}
+footer .marca{font-size:1.3rem;color:#fff}
+footer a{text-underline-offset:4px}
+
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .ovo{animation:none}
+  .btn{transition:none}
+}
+</style>
+</head>
+<body>
+
+<header class="hero" id="inicio">
+  <div class="wrap">
+    <div class="topo">
+      <a class="marca" href="#inicio" aria-label="Denir, ovos caipiras - início">
+        <span class="marca-ovo" aria-hidden="true"></span>
+        <span>Denir.<small>Ovos caipiras</small></span>
+      </a>
+      <nav aria-label="Principal">
+        <a href="#sobre">Nossa essência</a>
+        <a href="#ovos">Nossos ovos</a>
+        <a href="#contato">Fale com a gente</a>
+      </nav>
+      <a class="btn btn-gema" href="https://wa.me/5511998693023?text=Ol%C3%A1%2C%20Denir!%20Gostaria%20de%20fazer%20um%20pedido%20de%20ovos%20caipiras." target="_blank" rel="noopener">Pedir pelo WhatsApp</a>
+    </div>
+
+    <div class="hero-texto">
+      <h1><span>Ovos caipiras.</span><span>Fresquinhos de verdade.</span></h1>
+      <p class="lead">O sabor da roça que você conhece, com o carinho que sua mesa merece.</p>
+      <div class="acoes">
+        <a class="btn btn-gema" href="https://wa.me/5511998693023?text=Ol%C3%A1%2C%20Denir!%20Gostaria%20de%20fazer%20um%20pedido%20de%20ovos%20caipiras." target="_blank" rel="noopener">Fazer meu pedido</a>
+        <a class="btn btn-borda" href="#ovos">Conhecer os ovos</a>
+      </div>
+      <p class="selo">Galinhas criadas soltas. Qualidade em cada ovo.</p>
+    </div>
+
+    <div class="ovos" role="img" aria-label="Ovos caipiras de cascas de várias cores">
+      <span class="ovo" style="--c:#e9dcc3;--r:-4deg;--i:0"></span>
+      <span class="ovo pintado" style="--c:#c98f5f;--r:3deg;--i:1"></span>
+      <span class="ovo" style="--c:#a8cbbf;--r:-2deg;--i:2"></span>
+      <span class="ovo" style="--c:#f3ece0;--r:5deg;--i:3"></span>
+      <span class="ovo" style="--c:#b87a4b;--r:-3deg;--i:4"></span>
+      <span class="ovo pintado" style="--c:#dcc193;--r:2deg;--i:5"></span>
+      <span class="ovo" style="--c:#c8dccd;--r:-5deg;--i:6"></span>
+      <span class="ovo" style="--c:#d6a77a;--r:4deg;--i:7"></span>
+    </div>
+  </div>
+  <div class="palha"></div>
+</header>
+
+<main>
+  <section class="essencia" id="sobre">
+    <div class="wrap grade">
+      <div>
+        <h2>Tem coisas que a natureza faz melhor.</h2>
+        <div class="tx">
+          <p>Uma casca de cada cor. Um sabor que lembra a comida de casa. Nossos ovos caipiras trazem a simplicidade do campo para os pequenos momentos do seu dia.</p>
+          <p>No café da manhã, no bolo da família ou naquela receita especial: o bom começa com ingredientes de verdade.</p>
+        </div>
+      </div>
+      <ul class="pontos">
+        <li><strong>100% natural</strong><span>A natureza faz a sua parte.</span></li>
+        <li><strong>Galinhas criadas soltas</strong><span>Liberdade que faz a diferença.</span></li>
+        <li><strong>Mais sabor à mesa</strong><span>Bom de verdade, em cada receita.</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="nossos" id="ovos">
+    <div class="wrap grade">
+      <div>
+        <h2>Nossos ovos caipiras</h2>
+        <div class="tx" style="margin-top:1.2rem">
+          <p>Naturais, fresquinhos e cheios de sabor. Consulte disponibilidade, valores e entrega diretamente com Denir.</p>
+        </div>
+        <ul class="checks">
+          <li>100% natural</li>
+          <li>Galinhas criadas soltas</li>
+          <li>Fresquinhos para suas receitas</li>
+        </ul>
+        <a class="btn btn-verde" href="https://wa.me/5511998693023?text=Ol%C3%A1%2C%20Denir!%20Gostaria%20de%20saber%20os%20valores%20e%20a%20disponibilidade%20dos%20ovos%20caipiras." target="_blank" rel="noopener">Consultar valores pelo WhatsApp</a>
+      </div>
+      <figure>
+        <div class="cores" role="img" aria-label="Ovos com cascas em tons de creme, marrom e azul-esverdeado">
+          <span class="ovo" style="--c:#e9dcc3;--r:-4deg"></span>
+          <span class="ovo pintado" style="--c:#c98f5f;--r:3deg"></span>
+          <span class="ovo" style="--c:#a8cbbf;--r:-2deg"></span>
+          <span class="ovo" style="--c:#b87a4b;--r:5deg"></span>
+          <span class="ovo pintado" style="--c:#dcc193;--r:-3deg"></span>
+        </div>
+        <figcaption>Do campo para a sua mesa, com a cor que a natureza deu.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="convite">
+    <div class="wrap">
+      <h2>Vamos levar esse sabor para a sua casa?</h2>
+      <p>Fale com Denir e consulte disponibilidade, valores e entrega.</p>
+      <a class="btn btn-gema" href="https://wa.me/5511998693023?text=Ol%C3%A1%2C%20Denir!%20Gostaria%20de%20consultar%20a%20disponibilidade%20dos%20ovos%20caipiras." target="_blank" rel="noopener">Quero ovos fresquinhos</a>
+    </div>
+  </section>
+
+  <section class="contato" id="contato">
+    <div class="wrap grade">
+      <div>
+        <h2>Seu pedido começa com um oi.</h2>
+        <div class="tx" style="margin-top:1.2rem">
+          <p>Tire suas dúvidas, consulte os valores e combine seu pedido diretamente pelo WhatsApp.</p>
+        </div>
+        <a class="fone" href="https://wa.me/5511998693023" target="_blank" rel="noopener">(11) 99869-3023</a>
+        <p class="nota">Disponibilidade, pagamento e entrega são confirmados na conversa, antes de finalizar seu pedido.</p>
+      </div>
+
+      <form id="pedido" novalidate>
+        <h3>O que vai para sua mesa?</h3>
+        <label>Seu nome
+          <input type="text" id="nome" name="nome" autocomplete="name" required>
+        </label>
+        <label>Quantidade de ovos
+          <input type="number" id="qtd" name="qtd" min="1" inputmode="numeric" required>
+        </label>
+        <label>Quer deixar um recado? (opcional)
+          <textarea id="recado" name="recado"></textarea>
+        </label>
+        <button class="btn btn-verde" type="submit">Enviar pedido pelo WhatsApp</button>
+        <p class="nota" id="erro" role="alert" style="margin:0;color:#9a2b1c"></p>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <a class="marca" href="#inicio"><span class="marca-ovo" aria-hidden="true"></span><span>Denir.<small>Ovos caipiras</small></span></a>
+    <div>
+      <p>Sabor de roça, fresquinho para sua mesa.</p>
+      <p><a href="https://wa.me/5511998693023" target="_blank" rel="noopener">(11) 99869-3023</a></p>
+    </div>
+    <div>
+      <p>© Denir, ovos caipiras</p>
+      <p>Feito com carinho. Como tudo por aqui.</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function () {
+  var form = document.getElementById('pedido');
+  var erro = document.getElementById('erro');
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    var nome = document.getElementById('nome').value.trim();
+    var qtd = parseInt(document.getElementById('qtd').value, 10);
+    var recado = document.getElementById('recado').value.trim();
+    if (!nome) { erro.textContent = 'Digite seu nome para enviar o pedido.'; document.getElementById('nome').focus(); return; }
+    if (!qtd || qtd < 1) { erro.textContent = 'Informe a quantidade de ovos (um número maior que zero).'; document.getElementById('qtd').focus(); return; }
+    erro.textContent = '';
+    var texto = 'Olá, Denir! Meu nome é ' + nome + '. Gostaria de pedir ' + qtd + ' ovos caipiras.';
+    if (recado) texto += ' Recado: ' + recado;
+    window.open('https://wa.me/5511998693023?text=' + encodeURIComponent(texto), '_blank', 'noopener');
+  });
+})();
+</script>
+</body>
+</html>
